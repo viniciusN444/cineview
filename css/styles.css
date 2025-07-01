@@ -15,6 +15,11 @@
     --corTextos: #fff;
 }
 
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
 header{
     background-color: var(--corFundo);
     color: var(--corTextos);
@@ -22,6 +27,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    width: 100%;
 }
 
 header nav a{
@@ -42,14 +48,86 @@ header nav a{
     background-repeat: no-repeat;
     background-size: cover;
     height: 250px;
+    width: 100%;
+    padding: 15px;
 }
 
-/*Parei aqui, [estilizar o button do banner]*/
+button{
+    background-color: var(--corFundoBtn);
+    color: var(--corTextos);
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+}
 
-/* .container-banner button{
+#btnLançamentos{
+    display: block;
+    margin: auto;
+}
 
-} */
+/*Filmes populares e Ultimos adicionados*/
+.filmes-populares,
+.ultimos-adicionados{
+    background-color: var(--corFundoSections);
+    padding: 10px;
+}
 
-img{
-    width: 50px;
+.filmes-populares h2,
+.ultimos-adicionados h2{
+    text-align: center;
+    color: var(--corTextos);
+}
+
+.card{
+    background-color: var(--corTextos);
+    color: var(--corFundo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    margin: 10px auto;
+    width: 50%;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 15px;
+}
+
+.card img{
+    width: 100%;
+}
+
+.btnTodosFilmes{
+    display: block;
+    margin: 20px auto;
+}
+
+.filmes-populares span::after{
+    display: block;
+    content: "★★★★★";
+    color: yellow;
+    width: 60px;
+    height: 30px;
+}
+
+footer{
+    background-color: var(--corFundo);
+    color: var(--corTextos);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+footer a{
+    color: var(--corTextos);
+    font-weight: lighter;
+}
+
+footer a:hover,
+header nav a:hover{
+    color: blue;
+    text-decoration: underline;
 }
