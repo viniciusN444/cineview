@@ -16,7 +16,6 @@
 }
 
 body{
-    width: 100vw;
     height: 100vh;
 }
 
@@ -28,6 +27,7 @@ header{
     align-items: center;
     padding: 20px;
     width: 100%;
+    overflow: hidden;
 }
 
 header nav a{
@@ -62,7 +62,18 @@ button{
     border: none;
 }
 
-#btnLançamentos{
+button:hover {
+  background-color: #ff5722;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.btnAssistir{
+    width: 100%;
+}
+
+#btnLancamentos{
     display: block;
     margin: auto;
 }
@@ -88,7 +99,7 @@ button{
     align-items: center;
     flex-flow: column nowrap;
     margin: 10px auto;
-    width: 50%;
+    width: 80%;
     padding: 10px;
     border-radius: 10px;
     gap: 15px;
@@ -101,6 +112,7 @@ button{
 .btnTodosFilmes{
     display: block;
     margin: 20px auto;
+    width: 80%;
 }
 
 .filmes-populares span::after{
@@ -130,4 +142,72 @@ footer a:hover,
 header nav a:hover{
     color: blue;
     text-decoration: underline;
+}
+
+@media (min-width: 768px){
+    #btnLancamentos,
+    .btnTodosFilmes{
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    .btnTodosFilmes{
+        display: block;
+        margin: 50px auto;
+        width: 75%;
+    }
+    .container-populares,
+    .container-ultimosAdd{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .filmes-populares h2,
+    .ultimos-adicionados h2{
+        padding: 30px;
+        font-size: 50px;
+    }
+
+    .card{
+        width: 75%;
+        margin-top: 30px;
+    }
+
+    footer a{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px){
+        #btnLancamentos,
+    .btnTodosFilmes{
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    .btnTodosFilmes{
+        display: block;
+        margin: 50px auto;
+        width: 75%;
+    }
+    .container-populares,
+    .container-ultimosAdd{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .filmes-populares h2,
+    .ultimos-adicionados h2{
+        padding: 30px;
+        font-size: 60px;
+    }
+
+    .card{
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    footer a{
+        font-size: 1.8rem;
+    }
 }
