@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,41 +8,43 @@
     text-decoration: none;
 }
 
-:root{
+:root {
     --corFundo: #0d0d0d;
     --corFundoSections: #1e1e1e;
     --corFundoBtn: #ff3d00;
     --corTextos: #fff;
 }
 
-body{
+body {
     height: 100vh;
+    background-color: rgb(116, 104, 104);
 }
 
-header{
+header {
     background-color: var(--corFundo);
     color: var(--corTextos);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
     padding: 20px;
     width: 100%;
     overflow: hidden;
 }
 
-header nav a{
+header nav a {
     color: var(--corTextos);
     text-transform: uppercase;
 }
 
-.borda-direita{
+.borda-direita {
     border-right: 1px solid var(--corTextos);
-    margin-right: 10px; 
-    padding-right: 10px; 
+    margin-right: 10px;
+    padding-right: 10px;
     font-weight: bold;
 }
 
-.container-banner{
+.container-banner {
     background-image: url(../img/banner-cinema.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -52,7 +54,7 @@ header nav a{
     padding: 15px;
 }
 
-button{
+button {
     background-color: var(--corFundoBtn);
     color: var(--corTextos);
     font-weight: bold;
@@ -63,35 +65,35 @@ button{
 }
 
 button:hover {
-  background-color: #ff5722;
-  cursor: pointer;
-  transition: 0.3s;
+    background-color: #ff5722;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 
-.btnAssistir{
+.btnAssistir {
     width: 100%;
 }
 
-#btnLancamentos{
+#btnLancamentos {
     display: block;
     margin: auto;
 }
 
 /*Filmes populares e Ultimos adicionados*/
 .filmes-populares,
-.ultimos-adicionados{
+.ultimos-adicionados {
     background-color: var(--corFundoSections);
     padding: 10px;
 }
 
 .filmes-populares h2,
-.ultimos-adicionados h2{
+.ultimos-adicionados h2 {
     text-align: center;
     color: var(--corTextos);
 }
 
-.card{
+.card {
     background-color: var(--corTextos);
     color: var(--corFundo);
     display: flex;
@@ -105,17 +107,17 @@ button:hover {
     gap: 15px;
 }
 
-.card img{
+.card img {
     width: 100%;
 }
 
-.btnTodosFilmes{
+.btnTodosFilmes {
     display: block;
     margin: 20px auto;
     width: 80%;
 }
 
-.filmes-populares span::after{
+.filmes-populares span::after {
     display: block;
     content: "★★★★★";
     color: yellow;
@@ -123,7 +125,7 @@ button:hover {
     height: 30px;
 }
 
-footer{
+footer {
     background-color: var(--corFundo);
     color: var(--corTextos);
     display: flex;
@@ -133,81 +135,96 @@ footer{
     padding: 30px;
 }
 
-footer a{
+footer a {
     color: var(--corTextos);
     font-weight: lighter;
 }
 
 footer a:hover,
-header nav a:hover{
+header nav a:hover {
     color: blue;
     text-decoration: underline;
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+    }
+
     #btnLancamentos,
-    .btnTodosFilmes{
+    .btnTodosFilmes {
         padding: 20px;
         font-size: 1.2rem;
     }
 
-    .btnTodosFilmes{
+    .btnTodosFilmes {
         display: block;
         margin: 50px auto;
         width: 75%;
     }
+
     .container-populares,
-    .container-ultimosAdd{
+    .container-ultimosAdd {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
     .filmes-populares h2,
-    .ultimos-adicionados h2{
+    .ultimos-adicionados h2 {
         padding: 30px;
         font-size: 50px;
     }
 
-    .card{
+    .card {
         width: 75%;
         margin-top: 30px;
     }
 
-    footer a{
+    footer a {
         font-size: 1.5rem;
     }
 }
 
-@media (min-width: 1024px){
-        #btnLancamentos,
-    .btnTodosFilmes{
+@media (min-width: 1024px) {
+    .container-global{
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+    }
+    header {
+        flex-direction: row;
+    }
+
+    #btnLancamentos,
+    .btnTodosFilmes {
         padding: 20px;
         font-size: 1.2rem;
     }
 
-    .btnTodosFilmes{
+    .btnTodosFilmes {
         display: block;
         margin: 50px auto;
         width: 75%;
     }
+
     .container-populares,
-    .container-ultimosAdd{
+    .container-ultimosAdd {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
 
     .filmes-populares h2,
-    .ultimos-adicionados h2{
+    .ultimos-adicionados h2 {
         padding: 30px;
         font-size: 60px;
     }
 
-    .card{
+    .card {
         width: 80%;
         margin-top: 30px;
     }
 
-    footer a{
+    footer a {
         font-size: 1.8rem;
     }
 }
